@@ -35,12 +35,11 @@ a:
 func DelNearbyStr(arr []string) []string {
 a:
 	for {
-		for i, v := range arr {
-			if i != len(arr)-1 {
-				if v == arr[i+1] {
-					arr = append(arr[:i], arr[i+1:]...)
-					continue a
-				}
+		for i := 0; i < len(arr)-1; i++ {
+			if arr[i] == arr[i+1] {
+				arr = append(arr[:i], arr[i+1:]...)
+				i--
+				continue a
 			}
 		}
 		break
