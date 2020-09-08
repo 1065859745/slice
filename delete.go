@@ -12,8 +12,8 @@ func DelStr(arr []string, s string) []string {
 	return ar
 }
 
-// DelStrSame 删除string切片中相同的元素.
-func DelStrSame(arr []string) []string {
+// DelSameStr 删除string切片中相同的元素.
+func DelSameStr(arr []string) []string {
 	m := 1
 
 a:
