@@ -1,11 +1,13 @@
 package slice
 
 // DelStr 删除切片中某一个元素.
-func DelStr(arr []string, s string) []string {
+func DelStr(arr []string, s ...string) []string {
 	var ar []string
-	for i, v := range arr {
-		if v != s {
-			ar = append(ar, arr[i])
+	for i, n := range arr {
+		for _, m := range s {
+			if n != m {
+				ar = append(ar, arr[i])
+			}
 		}
 	}
 	return ar
