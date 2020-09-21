@@ -4,10 +4,9 @@ package slice
 func DelStr(arr []string, s string) []string {
 	var ar []string
 	for i, v := range arr {
-		if v == s {
-			continue
+		if v != s {
+			ar = append(ar, arr[i])
 		}
-		ar = append(ar, arr[i])
 	}
 	return ar
 }
